@@ -1,0 +1,36 @@
+---
+title: Core Concepts
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Structure of a transcript
+
+You can write anything you want on the text editor. Paperedit will ignore everything that it doesn't recognize as a Section
+
+```
+Speaker [Timestamp] Text [Timestamp] Text
+```
+
+- **Speaker:** (Optional) Name of speaker for sections on the same line. The name is used for organization purposes and is exported in the Reaper Project, CSV and JSON formats.
+- **Timestamp:** Time that marks the start of the following text in the audio file. The timestamp follows the format **[hh:mm:ss]**. Timestamps must be unique and can't be composed of different text styles (eg: must be either entirely bold or entirely normal)
+- **Text:** Transcribed text. Strikedtheoughs represent text that should be edited out of the audio. 
+
+Each Timestmap + Text pair is a Section.
+
+### Cutting sections
+
+Sections that are entirely striked are considered to be cuts. They will be painted Red in the timeline. Cut sections can be skipped during playback using <img alt="import button" src={useBaseUrl('imgs/skip_striked.png')} />. They will also be removed from MP3 and WAV exports.
+
+Sections that contain both striked and non-striked text are considered to be partial edits. They will be painted Blue in the timeline. They are included in MP3 and WAV exports. In order to turn a partial edit into a cut you must add timestamps to the beginning and end of any striked portions.
+
+## Privacy and Security
+
+PaperEdit works entirely inside your browser, never sending any data anywhere outside of your machine. 
+
+- The auto-save feature that enables it to remember the work you had done the last time you closed the website saves all of it's data to your browser in your machine.
+- The audio is decoded locally, and is never copied or sent to any servers anywhere. 
+
+:::caution
+The auto-save data is stored as plain text to the browser local storage. While this should be safe enough for most purposes, the data can be easily accessed by other users of the same machine and could be exploited by malware. If the content of your transcript is sensitive make sure to **Clear Saved Data** before leaving the website. If your security policy requires encryption of the data, PaperEdit is not ideal for you
+:::

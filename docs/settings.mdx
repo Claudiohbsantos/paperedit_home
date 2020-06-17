@@ -1,0 +1,71 @@
+---
+title: Settings
+---
+
+## Install
+
+PaperEdit can be installed from supported browsers, working on your device as a native app and working completely offline. If your broser is supported, the option "Install PaperEdit as App" will be shown at the top of the settings menu
+
+## Audio Settings
+
+### Volume
+
+Audio Playback Volume. Double click to reset to unity.
+
+### Playback Rate
+
+Audio Playback Speed. Double click to reset to 1x
+
+### Skip Length
+
+Length of each audio skip performed with **Skip BackWards** or **Skip Forward** buttons on transport bar or with Keybindings.
+See [Time Input](settings#time-input) for details on format.
+
+## Export Settings
+
+### Time format for text exports
+
+Controls how the timestamps will be exported on CSV and JSON exports.
+
+- Seconds: ss
+- Timestamp: hh:mm:ss
+- Timecode: hh:mm:ss:ff
+
+### Framerate
+
+Framerate to be used when using timecode for time input on [Export Time Offset](settings#export-time-offset) or [Skip Length](settings#skip-length) settings.
+
+### Export Time Offset
+
+Offset to be added to timestamps on CSV or JSON exports.
+
+## Time Input
+
+Can be provided in several formats:
+
+- hh:mm:ss
+- ss
+- hh:mm:ss:ff
+
+PaperEdit will attempt to extract numbers from the input, considering anything other than a digit to be a separator. 121 seconds can be written in any of the following forms:
+
+```
+121
+00:02:1
+02:01
+2 1
+2.1
+2m1s
+0 0 121
+```
+
+Numbers are not limited to 2 digits and must not obey time formatting conventions. If you wish to input 70 minutes and 2 seconds you can write `00:70:02` and PaperEdit will make the necessary conversions internally.
+
+As seen above, leading 0s can be ommited as long as frames are not being provided. However, if you wish to provide frames then all fields (hh:mm:ss:ff) must be provided:
+
+```
+With 24fps as framerate:
+
+00 01 00 12 = 60.5 seconds
+01 00 12 = 3612 seconds
+```

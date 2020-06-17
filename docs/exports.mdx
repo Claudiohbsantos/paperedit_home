@@ -1,0 +1,43 @@
+---
+title: Exports
+---
+
+## Save Project
+
+PaperEdit projects can be saved to a file that can be later loaded into PaperEdit in any machine. The file contains only the text of the transcription. The audio file used in the project will have to be copied separately if you wish to open the project on a different computer
+
+## MP3 or WAV
+
+You can export an audio file containing only sections that are either uncut or only partially cut. You can preview the exported file by enabling [Skip Striked Sections](getting-started#skip-striked-sections). You can also see how long the edited file will be on the Edited Runtime counter to the left of the [Skip Striked Sections](getting-started#skip-striked-sections) button.
+
+## Reaper Project
+
+PaperEdit can generate a [Reaper](https://www.reaper.fm/) project containing only the sections that are either uncut or only partially cut. Reaper will look for the audio file in the same folder as the .rpp project file generated. 
+
+Each Speaker will be placed on it's own track.
+
+Markers will be created to remind the user of each partial cut that need to be removed from the edit.
+
+This enables a natural workflow to progress from transcription, to paperediting, to then sound editing and mix without redundant work being necessary.
+
+## CSV
+
+The exported CSV will contain the following Columns:
+
+- Speaker
+- Start - time in seconds
+- End - time in seconds
+- Removed - Boolean indicating whether section was entirely cut or not
+- Section - Section Text
+- Lines to Remove (; delimited) - list of partial cuts if any
+
+## JSON
+
+The exported JSON will contain an array of objects with the following properties:
+
+- start - time in seconds
+- end - time in seconds
+- name - speaker name
+- line - section text
+- striked - boolean indicating whether section was entirely cut or not
+- toRemove - array of strings listing partial cuts if any

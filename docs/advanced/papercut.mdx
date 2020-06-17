@@ -1,0 +1,17 @@
+---
+title: Papercut Format
+---
+
+Selecting **Save Project** in the Export menu allows you to save a Papercut (.ppcut) file containing the current transcript. This file is in reality just a JSON file containing an Object with the following properties:
+
+- delta - Object representing a [Quill Delta](https://quilljs.com/docs/delta/). 
+- audioFile - String containing name of audio file being used. It is only used to hint the user towards what was the last file used while editing.
+- title - String containing name of project.
+
+```json title="papercut_template.ppcut"
+{
+  'delta': {},
+  'audioFile': '',
+  'title': ''
+}
+```
