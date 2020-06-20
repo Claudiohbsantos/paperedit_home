@@ -20,12 +20,12 @@ module.exports = {
           position: "left",
         },
         {
-          to: "docs/about",
+          to: "docs/",
           label: "About",
           position: "left",
         },
         {
-          to: "docs/",
+          to: "docs/getting-started",
           label: "Docs",
           position: "left",
         },
