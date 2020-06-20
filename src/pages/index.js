@@ -133,8 +133,8 @@ function Home() {
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`Home`}
+      description="PaperEdit is a transcription and editing software that allows you to cut your sound files using the text from the transcript and a timeline."
     >
       <div class="alert alert--warning" role="alert">
         <strong>NOTE:</strong> PaperEdit is currently in open testing phase.

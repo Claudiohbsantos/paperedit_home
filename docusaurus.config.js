@@ -1,7 +1,7 @@
 module.exports = {
   title: "PaperEdit",
   // tagline: "Cut audio on paper",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://home.paperedit.app",
   baseUrl: "/",
   favicon: "imgs/favicon.ico",
   // organizationName: "facebook", // Usually your GitHub org/user name.
