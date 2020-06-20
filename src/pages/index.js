@@ -107,7 +107,7 @@ const features = [
     description: (
       <>
         PaperEdit is free to use. No subscriptions, license keys, iLoks nor any
-        other obstacles. If you use PaperEdit for work please consider donating.
+        other obstacles. 
       </>
     ),
   },

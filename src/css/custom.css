@@ -24,7 +24,7 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-.donate-btn::before {
+/* .donate-btn::before {
   content:"";
   display:inline-block;
   background-image: url(/landing/gift.svg);
@@ -33,7 +33,7 @@
   vertical-align: middle;
   padding-right: 7px;
   background-repeat: no-repeat;
-}
+} */
 
 .hero {
   background:transparent;

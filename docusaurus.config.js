@@ -29,12 +29,12 @@ module.exports = {
           label: "Docs",
           position: "left",
         },
-        {
-          to: "docs/",
-          label: "Donate",
-          position: "right",
-          className: "donate-btn",
-        },
+        // {
+        //   to: "docs/",
+        //   label: "Donate",
+        //   position: "right",
+        //   className: "donate-btn",
+        // },
       ],
     },
     footer: {
