@@ -61,7 +61,7 @@ const features = [
       <>
         PaperEdit is meant to be driven from the keyboard. Edit and Navigate
         your project without ever reaching for the mouse.{" "}
-        <a href="docs/keybindings">Keybindings</a> are 100% customizable as
+        <a href="docs/keybindings">Keybindings</a> are customizable as
         well, so you can make it fit exactly your preferences.
       </>
     ),
